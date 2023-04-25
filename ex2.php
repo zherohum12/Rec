@@ -43,7 +43,7 @@
         <tr><th>Placa do carro</th><th>Cor do Carro</th><th>Precendecia</th><th>Carro</th><th>proprietario</th></tr>
         <?php 
         foreach ($matriz as $linha) {
-            if (empty($nome) || strtolower($linha[0]) == strtolower($nome)){  
+            if (empty($nome) || substr(strtolower($linha[0]), 0, strlen($nome)) == substr(strtolower($nome), 0, strlen($nome))){  
                 echo "<tr>";
                 $cont = 0;
                 foreach ($linha as $item) {
